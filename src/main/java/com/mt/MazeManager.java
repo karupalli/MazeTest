@@ -63,7 +63,7 @@ public class MazeManager {
 			for (char[] cs : lineList) {
 				columns = 0;
 				for (char c : cs) {
-					System.out.print(c);
+					//System.out.print(c);
 					Position position = new Position(columns, rows);
 					position.setFill(Fill.getFill(c));
 					positions[columns][rows] = position;
@@ -107,7 +107,7 @@ public class MazeManager {
 			// Move around the maze
 			while (true) {
 				nextPosition = maze.moveNext(explorer.getPosition());
-				System.out.println(nextPosition);
+				//System.out.println(nextPosition);
 				explorer.changePosition(nextPosition);
 				if (nextPosition.getFill() == Fill.Exit) {
 					System.out.println("Reached to Exit");
